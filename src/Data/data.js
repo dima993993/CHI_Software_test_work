@@ -1,4 +1,4 @@
-const data = {
+const store = {
   loans: [
     {
       id: "1",
@@ -33,3 +33,4 @@ const data = {
     },
   ],
 };
+export default store;
