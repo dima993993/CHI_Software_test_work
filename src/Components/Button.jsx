@@ -1,11 +1,5 @@
-const Button = (props) => {
-  return (
-    <button
-      className='btn'
-      onClick={() => props.getStatePopap(props.statePopap ? false : true)}>
-      Invest
-    </button>
-  );
+const Button = () => {
+  return <button className='btn'>Invest</button>;
 };
 
 export default Button;

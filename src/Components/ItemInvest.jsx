@@ -28,11 +28,12 @@ const ItemInvest = (props) => {
           </p>
         </div>
       </div>
-      <div>
-        <Button
-          getStatePopap={props.getStatePopap}
-          statePopap={props.statePopap}
-        />
+      <div
+        onClick={() => {
+          props.getCurrentLoan(props.id);
+          props.getStatePopap(props.statePopap ? false : true);
+        }}>
+        <Button />
       </div>
     </div>
   );

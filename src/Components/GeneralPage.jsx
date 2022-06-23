@@ -9,6 +9,7 @@ const GeneralPage = (props) => {
             key={el.id}
             getStatePopap={props.getStatePopap}
             statePopap={props.statePopap}
+            getCurrentLoan={props.getCurrentLoan}
             {...el}
           />
         ))}

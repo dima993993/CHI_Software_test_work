@@ -86,11 +86,14 @@
 }
 .field_loan {
   margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 .field_loan > *:last-child {
   margin-left: 30px;
 }
 .field_loan input {
+  width: 300px;
   padding: 10px 5px;
   border: 1px solid #cccccc;
   border-radius: 5px;
