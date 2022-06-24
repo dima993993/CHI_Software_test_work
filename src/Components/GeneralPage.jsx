@@ -7,16 +7,17 @@ const GeneralPage = (props) => {
         {props.loans.map((el) => (
           <ItemInvest
             key={el.id}
-            getStatePopap={props.getStatePopap}
-            statePopap={props.statePopap}
-            getCurrentLoan={props.getCurrentLoan}
             {...el}
+            openPopap={props.getTogglePopap}
+            getElementId={props.getElementId}
+            textValue={props.textValue}
+            {...props.loans}
           />
         ))}
         <div className='total_amount'>
           <div>Total amount available for invastment:</div>
           <div>
-            238 <span>$</span>
+            {props.totalAmountInvestment} <span>$</span>
           </div>
         </div>
       </div>

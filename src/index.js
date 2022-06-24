@@ -1,14 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import store from "./Data/data";
+import { Provider } from "react-redux";
+import store from "./Redux/redux-store";
+import AppContainer from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App loans={store.loans} />
+    <Provider store={store}>
+      <AppContainer />
+    </Provider>
   </React.StrictMode>
 );
 

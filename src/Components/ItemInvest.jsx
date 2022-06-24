@@ -15,10 +15,6 @@ const ItemInvest = (props) => {
             {props.annualised_return}
           </p>
           <p>
-            <span>term_remaining: </span>
-            {props.term_remaining}
-          </p>
-          <p>
             <span>ltv: </span>
             {props.ltv}
           </p>
@@ -28,12 +24,19 @@ const ItemInvest = (props) => {
           </p>
         </div>
       </div>
-      <div
-        onClick={() => {
-          props.getCurrentLoan(props.id);
-          props.getStatePopap(props.statePopap ? false : true);
-        }}>
-        <Button />
+      <div className='btn_block'>
+        {props.invested ? (
+          <div className='invested'>Invested</div>
+        ) : (
+          <div></div>
+        )}
+        <div
+          onClick={() => {
+            props.getElementId(props.id);
+            props.openPopap(true);
+          }}>
+          <Button />
+        </div>
       </div>
     </div>
   );
